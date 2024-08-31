@@ -1,0 +1,38 @@
+.main-bg {
+    background-image: linear-gradient(to bottom, rgba(20, 157, 188, 0.397), var(--third-color)), url('./img/fundo.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+    min-width: 32rem;
+}
+
+.white-bg {
+    background: var(--white-color);
+    color: var(--first-color);
+}
+
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.menu-spacing {
+    height: 6.5rem;
+}
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.first-bg {
+    background: var(--third-color);
+    color: var(--white-color);
+
+}
