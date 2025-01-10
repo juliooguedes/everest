@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 0.1 solid var(--light-color);
+    border-bottom: 1.0 solid var(--first-color);
     z-index: 1;
 }
 
@@ -15,8 +15,6 @@
     padding-top: 0;
     padding-bottom: 0;
 }
-
-
 
 .menu h1 {
     font-size: 2.3rem;
@@ -41,7 +39,7 @@
 
 .menu ul li a {
     display: block;
-    padding: 2rem;
+    padding: 1.5rem;
     font-size: 1.8rem;
     color: var(--second-color);
     position: relative;
