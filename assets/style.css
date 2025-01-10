@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1.5fr 1.0fr;
     gap: var(--gap);
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .intro-text-content {
@@ -15,7 +15,7 @@
 .intro-text-content h2 {
     color: var(--white-color);
     text-shadow: 3px 5px 10px rgba(245, 132, 33, 0.418);
-    font-size: 44px;
+    font-size: 80px;
 }
 
 .intro-text-content span {
@@ -64,6 +64,18 @@ li {
 .title-sobrenos {
     margin-bottom: 30px;
     color: var(--third-color);
+}
+.logo-sobrenos{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-sobrenos img {
+    width: 250px;
+    height: 140px;
 }
 
 /*.title-card {
@@ -320,6 +332,11 @@ li {
 }
 
 @media (max-width: 768px) {
+
+    .intro-text-content h2 {   
+    font-size: 50px;
+}
+
 
     .intro-content,
     .grid,    
