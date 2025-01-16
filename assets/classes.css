@@ -4,6 +4,7 @@
     background-position: center center;
     color: var(--white-color);
     min-width: 32rem;
+    width: 100%;
 }
 
 .white-bg {
@@ -34,5 +35,6 @@ body .full-width {
 .first-bg {
     background: var(--third-color);
     color: var(--white-color);
+    width: 100%;
 
 }
