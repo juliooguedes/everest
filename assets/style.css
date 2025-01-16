@@ -167,6 +167,10 @@ li {
     display: block;
 }
 
+.atividade-imagem img {
+    overflow: hidden;
+}
+
 .atividade-info {
     padding: 15px;
 }
@@ -352,6 +356,10 @@ li {
 
     .intro-text-content h2 {
         font-size: 65px;
+    } 
+
+    .sobrenos-content {
+        text-align: center;
     }
 
     .title-sobrenos, .atividades-content {
