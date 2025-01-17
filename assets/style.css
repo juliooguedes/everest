@@ -276,6 +276,12 @@ li {
     color: var(--third-color);
 }
 
+.team-member a {
+    text-decoration: none;
+    color: var(--third-color);
+    font-size: 5rem;
+}
+
 
 /* INICIO FOOTER*/
 
