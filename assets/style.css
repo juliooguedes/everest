@@ -77,247 +77,738 @@ li {
 }
 
 .logo-sobrenos img {
-    width: 300px;
-    height: 160px;
+    width: 220px;
+    height: 130px;
 }
 
-/* Grid do Espaço */
 
-.grid-one-content,
-.atividades-content {
+
+/* --- CONFIGURAÇÃO MOSAICO ATIVIDADES --- */
+
+/* CONTAINER PRINCIPAL DA SEÇÃO */
+.mosaico-secao-compacta {
+    padding: 60px 20px; /* Adicionei padding lateral para não colar na borda em telas menores */
+    background-color: var(--white-color, #fff);
+    width: 100%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    min-height: 80vh;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo */
 }
 
-.grid-main-heading {
-    margin-bottom: 1rem;
+.mosaico-topo-compacto {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
 }
 
-.grid-description {
-    padding-bottom: 5rem;
+.mosaico-topo-compacto p {
+    color: var(--second-color);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.grid {
+.mosaico-topo-compacto h2 {
+    color: var(--third-color, #003247);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* --- AQUI ESTÁ A CORREÇÃO DO CENTRALIZAMENTO --- */
+.mosaico-grid-compacto {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-    counter-reset: grid-counter;
-    margin-top: 2rem;
-
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    
+    /* O SEGREDO PARA FICAR NO MEIO: */
+    max-width: 1150px;  /* Limita a largura para não esticar na tela toda */
+    margin: 0 auto;     /* Centraliza o bloco na página */
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra leve para destacar o bloco */
 }
 
-.gallery-img {
-    margin: 0 auto;
-    max-width: 40rem;
-    max-height: 40rem;
+/* CONFIGURAÇÃO DOS QUADRADOS */
+.mosaico-card-comp {
+    height: 280px; /* Altura fixa para manter o formato quadrado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center;  /* Centraliza o texto */
+    padding: 30px;
+    position: relative;
     overflow: hidden;
-    border-radius: 8px;
-
 }
 
-.gallery-img img {
+/* FOTOS */
+.mosaico-secao-fotos {
+    padding: 60px 20px; /* Adicionei padding lateral para não colar na borda em telas menores */
+    background-color: var(--third-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo */
+}
+
+.mosaico-topo-fotos {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.mosaico-topo-fotos p {
+    color: var(--second-color);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.mosaico-topo-fotos h2 {
+    color: var(--white-color);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.mosaico-card-comp.foto {
+    padding: 0 !important;
+}
+
+.mosaico-card-comp.foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.6s;
-}
-
-.gallery-img img:hover {
-    transform: scale(1.03);
-}
-
-/* Aividade proposta */
-
-#atividades-propostas {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--white-color);
-}
-
-#atividades-propostas h2 {
-    font-size: 5rem;
-    color: var(--third-color);
-    margin-bottom: 20px;
-}
-
-.descricao-atividades {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-    margin-top: 30px;
-}
-
-.atividade {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.6s;
-}
-
-.atividade:hover {
-    transform: scale(1.03);
-}
-
-.atividade-imagem {
-    width: 100%;
-    height: auto;
+   
+    transition: 0.5s ease;
     display: block;
 }
 
-.atividade-imagem img {
-    overflow: hidden;
-}
-
-.atividade-info {
-    padding: 15px;
-}
-
-.atividade-info h3 {
-    font-size: 3rem;
-    color: var(--third-color);
-    margin-bottom: 10px;
-}
-
-.atividade-info p {
-    color: #666;
-    line-height: 1.5;
-}
-
-.atividades-description {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    color: var(--second-color);
-}
-
-
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-    counter-reset: grid-counter;
-}
-
-.pilates h3 {
-    font-size: 3rem;
-    position: relative;
-    padding-bottom: 2rem;
-    margin-left: 2rem;
-    color: var(--third-color);
-}
-
-.services {
-    color: var(--white-color);
-    text-shadow: 3px 2px 5px rgba(20, 157, 188, 0.377);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 1rem;
-    text-align: center;
-
-}
-
-.services h2 {
-    margin-top: 4rem;
-    text-align: center;
-}
-
-/* Card Profissionais */
-
-.team-section {
-    padding: 40px 20px;
-}
-
-.team-section h2 {
-    color: var(--white-color);
-    margin-bottom: 60px;
-    font-size: 5rem;
-}
-
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5rem;
-}
-
-.team-member {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-member:hover {
+.mosaico-card-comp.foto:hover img {    
     transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.team-member img {
-    width: 100%;
-    height: auto;
+/* CORES E TEXTOS */
+.mosaico-card-comp.azul-marinho {
+    background-color: var(--third-color, #003247);
+    color: #fff;
 }
 
-.team-member h3 {
+.mosaico-card-comp.turquesa {
+    background-color: var(--second-color, #149dbc);
+    color: #fff;
+}
+
+.mosaico-card-comp h3 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--first-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.mosaico-card-comp p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 250px; /* Impede que o texto fique muito largo */
+}
+
+/* AJUSTE PARA O ITEM QUE OCUPA 2 ESPAÇOS (FISIO ESPORTIVA) */
+@media (min-width: 1025px) {
+    .span-2-comp {
+        grid-column: span 2;
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .mosaico-grid-compacto {
+        grid-template-columns: repeat(2, 1fr); /* Vira 2 colunas no tablet */
+        max-width: 600px; /* Ajusta a largura no tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .mosaico-grid-compacto {
+        grid-template-columns: 1fr; /* Vira 1 coluna no celular */
+    }
+    .mosaico-card-comp {
+        height: auto;
+        min-height: 250px;
+    }
+}
+
+/* FIM ATIVIDADE PROPOSTAS */
+
+/* Equipe */ 
+
+/* --- Configuração Geral da Seção Premium --- */
+.premium-bio-section {
+    /* O degradê de azul profundo para azul petróleo */
+    background: linear-gradient(135deg, #00263b 0%, #005f73 100%);
+    padding: 100px 20px; /* Espaçamento generoso */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif; /* Use a fonte que importou */
+    overflow: hidden; /* Evita que elementos vazem da seção */
+    position: relative;
+}
+
+.premium-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente texto e imagem */
+    justify-content: space-between; /* Separa as duas colunas */
+    gap: 60px; /* Espaço entre texto e imagem */
+}
+
+/* --- Coluna da Esquerda: Textos --- */
+.premium-content {
+    flex: 1; /* Ocupa o espaço disponível */
+    max-width: 600px;
+}
+
+/* O subtítulo  pequeno (Kicker) */
+.premium-kicker {
+    display: block;
+    color: var(--white-color);
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* O nome gigante em azul claro */
+.premium-name {
+    font-size: 4.5rem;
+    font-weight: 800;
     color: var(--second-color);
-    font-size: 3rem;
-    margin-bottom: 10px;
+    line-height: 1;
+    margin: 0 0 30px 0;
 }
 
-.team-member p {
-    color: var(--third-color);
+/* A descrição */
+.premium-description {
+    font-size: 1.75rem;
+    line-height: 1.6;
+    color: #e0e0e0; /* Branco levemente acinzentado para leitura */
+    margin-bottom: 40px;
 }
 
-.team-member a {
+.premium-description strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+
+/* --- Coluna da Direita: Imagem e Anel --- */
+.premium-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* O círculo laranja externo */
+.image-ring {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    /* O truque do anel: borda laranja com um espaço transparente */
+    border: 4px solid #ff8c00;
+    padding: 15px; /* O espaço entre o anel e a foto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Brilho sutil no anel */
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.2);
+}
+
+/* A imagem dentro do anel */
+.image-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+    border-radius: 50%;
+    /* Uma borda escura na própria imagem para separá-la do fundo */
+    border: 8px solid #00263b; 
+}
+
+/* --- Responsividade (Para Celulares e Tablets) --- */
+@media (max-width: 1024px) {
+    .premium-name {
+        font-size: 3.5rem;
+    }
+    .image-ring {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-container {
+        flex-direction: column; /* Empilha texto e imagem */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .premium-content {
+        max-width: 100%;
+    }
+
+    .premium-name {
+        font-size: 3rem; /* Diminui o nome no celular */
+    }
+
+    .premium-description {
+        font-size: 1.1rem;
+    }
+    
+    /* No celular, a imagem pode ficar um pouco menor */
+    .image-ring {
+        width: 320px;
+        height: 320px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    
+    .premium-btn-whatsapp {
+        width: 100%; /* Botão largura total no celular */
+        justify-content: center;
+    }
+}
+
+/* --- O Botão do Instagram (Estilo Laranja Premium) --- */
+.premium-btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--second-color); 
+    color: #ffffff;
     text-decoration: none;
-    color: var(--third-color);
-    font-size: 5rem;
+    padding: 18px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px -10px var(--second-color); /* Sombra laranja */
 }
 
+.premium-btn-instagram i {
+    font-size: 1.8rem;
+}
+
+.premium-btn-instagram:hover {
+    background-color: var(--third-color); /* Laranja um pouco mais escuro ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de levantar */
+    box-shadow: 0 15px 30px -10px var(--third-color)};
+
+/* FIM Equipe */ 
+
+/* Container do Carrossel */
+.everest-carrossel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    /* Essencial para o efeito 3D no computador */
+    perspective: 1200px; 
+    overflow: hidden;
+}
+
+.everest-wrapper {
+    display: flex;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding: 40px 20px;
+    scrollbar-width: none;
+}
+
+.everest-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card Padrão */
+.everest-card {
+    min-width: 350px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.everest-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- CONFIGURAÇÃO EXCLUSIVA PARA COMPUTADOR (3D) --- */
+@media (min-width: 769px) {
+    .everest-wrapper {
+        justify-content: center;
+        align-items: center;
+        height: 520px;
+        position: relative;
+        transform-style: preserve-3d;
+        overflow: visible; /* Permite ver as fotos inclinadas saindo da linha */
+    }
+
+    .everest-card {
+        position: absolute;
+        opacity: 0; /* Esconde as fotos que não são as 3 principais */
+        transform: translate3d(0, 0, -200px);
+    }
+
+    /* Foto no Centro */
+    .everest-card.central {
+        transform: translate3d(0, 0, 100px);
+        opacity: 1;
+        z-index: 10;
+    }
+
+    /* Foto Inclinada à Esquerda */
+    .everest-card.esquerda {
+        transform: translate3d(-350px, 0, 0) rotateY(35deg) scale(0.85);
+        opacity: 0.6;
+        z-index: 5;
+    }
+
+    /* Foto Inclinada à Direita */
+    .everest-card.direita {
+        transform: translate3d(350px, 0, 0) rotateY(-35deg) scale(0.85);
+        opacity: 0.6;
+        z-index: 5;
+    }
+}
+
+/* --- MOBILE CONTINUA IGUAL --- */
+@media (max-width: 768px) {
+    .everest-wrapper {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .everest-card {
+        min-width: 85%;
+        scroll-snap-align: center;
+    }
+}
+
+/* Bolinhas */
+.everest-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+.ponto-everest {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ponto-everest.ativo {
+    background-color: #f58421;
+    transform: scale(1.3);
+}
 
 /* INICIO FOOTER*/
 
-.footer {
+/* CONTATO */
+.contato-secao {
+    padding: 80px 20px;
+    background-color: var(--white-color, #ffffff);
+    text-align: center;
+    font-family: 'Sora', sans-serif; /* Usando a fonte que você já importou */
+}
+
+.contato-topo p:first-child {
+    color: var(--second-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.4rem;
+    margin-bottom: 5px;
+}
+
+.contato-topo h2 {
+    color: var(--third-color);
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contato-legenda {
+    color: var(--second-color);
+    font-size: 1.8rem;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+/* Container Marrom/Dourado */
+.contato-box-principal {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--third-color); /* Cor de fundo idêntica à imagem */
+    border-radius: 4px;
+    min-height: 350px;
+}
+
+.contato-item {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
-    gap: 2rem;
-    background-color: var(--third-color);
-    color: var(--white-color);
-
+    padding: 40px;
+    color: #ffffff;
 }
 
-.footer-icons {
-    display: flex;
-    margin-top: 1rem;
-    gap: 1rem;
-
-
+.contato-icone {
+    font-size: 4.5rem;
+    margin-bottom: 15px;
 }
 
-.footer-icons i {
-    gap: 1rem;
-    font-size: 4rem;
-    text-align: center;
+.contato-item h3 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contato-item p {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/* Linha divisória vertical */
+.divisor-lateral {
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Botão Branco */
+.contato-botao-branco {
+    background-color: #ffffff;
+    color: var(--third-color);
+    padding: 15px 35px;
+    border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
-    color: var(--white-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.footer img {
-    width: 18rem;
-    height: 8rem;
+.contato-botao-branco:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+/* Ajuste para Celular */
+@media (max-width: 768px) {
+    .contato-box-principal {
+        flex-direction: column;
+    }
+    
+    .divisor-lateral {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .contato-topo h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* FIM CONTATO */
+
+/* LOCALIZAÇÃO */
+.localizacao-container {
+    background-color: var(--third-color); /* O azul escuro que você já usa */
+    color: #fff;
+    padding-top: 60px;
+    position: relative;
+}
+
+.localizacao-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    text-align: center;
+}
+
+.info-texto h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.info-texto p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botão de Rota Estilizado */
+.btn-rota {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color:var(--white-color);
+    color: var(--third-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-rota:hover {
+    background-color: var(--white-color);
+    transform: translateY(-3px);
+}
+
+/* Mapa com efeito de transição */
+.mapa-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+}
+
+/* O efeito de "degradê" sobre o mapa */
+.mapa-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--third-color), transparent);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.mapa-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(0.3) contrast(1.1); /* Deixa o mapa mais elegante */
+}
+
+/* FIM LOCALIZAÇÃO */
+
+/* FOOTER */
+
+.footer-premium {
+    background-color: var(--third-color, #003247); /* Usa o azul escuro do seu projeto */
+    color: #ffffff;
+    padding: 60px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column .footer-logo {
+    width: 180px;
+    margin-bottom: 15px;
+}
+
+.footer-motto {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.footer-column h3 {
+    color: var(--second-color); /* O bronze/dourado que usamos na seção de contato */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.footer-column ul li a:hover {
+    opacity: 1;
+    color: var(--second-color);
+    padding-left: 8px;
+}
+
+.footer-social-link a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.footer-social-link a i {
+    font-size: 2.5rem;
+}
+
+.footer-social-link a:hover {
+    color: var(--second-color);
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-social-link a {
+        justify-content: center;
+    }
+
+    .footer-column .footer-logo {
+        margin: 0 auto 15px;
+    }
+}
+
+/* FIM FOOTER */
 
 /* Button Whatsapp*/
 
@@ -408,6 +899,7 @@ li {
     .grid-one-content,
     .atividades-content {
         display: block;
+        text-align: center;
     }
 
     .menu {
