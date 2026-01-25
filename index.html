@@ -2,12 +2,17 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">    
+    <meta name="theme-color" content="rgb(0,50,71)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Everest - Fisioterapia e Pilates</title>
+
     <link rel="icon" type="icon" href="./assets/img/icon.ico" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Clínica Everest" />
@@ -26,9 +31,7 @@
     <meta name="twitter:image"
         content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRttyWffZa-VrwHbehVGt5xzWKMLrQPA_h9rA&s">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="rgb(0,50,71)">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Everest - Fisioterapia e Pilates</title>
+
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -68,8 +71,9 @@
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#SobreNos">Sobre Nós</a></li>
                     <li><a href="#gallery">Clínica</a></li>
-                    <li><a href="#atividades-propostas">Serviços</a></li>
-                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#atividade">Serviços</a></li>
+                    <li><a href="#equipe">Profissional</a></li>
+                    <li><a href="#contato">Contato</a></li>
                     <li><a href="#Localizacao">Localização</a></li>
                 </ul>
             </nav>
@@ -105,199 +109,209 @@
             <p><strong>Nosso objetivo é ajudar você a alcançar o topo da sua saúde!</strong></p>
 
             <div class="logo-sobrenos">
-                <img src="/assets/img/logo.png" alt="">
+                <img src="./assets/img/Logo/Everest_Submarca.png" alt="Logo Everest Sobre nós">
             </div>
 
         </div>
     </section>
 
 
-    <section id="gallery" class="grid-one first-bg section">
-        <div class="main-content grid-one-content">
-            <h2 class="grid-main-heading">Nosso Espaço</h2>
-            <p class="grid-description">Tudo preparado com o maior amor para te receber.</p>
-
-            <div class="grid">
-                <div class="gallery-img">
-                    <img src="./assets/img/frente-clinica.jpg" alt="Imagem interna da clinica" />
+    <section id="gallery" class="mosaico-secao-fotos">
+    <div class="mosaico-topo-fotos">
+            <h2>Nosso Espaço</h2>
+            <p>Tudo preparado com o maior amor para te receber.</p>
+            
+            <div class="everest-carrossel-container">
+                <div class="everest-wrapper" id="js-wrapper">
+                    <div class="everest-card"><img src="./assets/img/Clinica/frente-clinica.jpg" alt="Imagem da fachada da clinica"></div>
+                    <div class="everest-card"><img src="./assets/img/Clinica/Recepção.jpeg" alt="Imagem interna da Recepção"></div>
+                    <div class="everest-card"><img src="./assets/img/Clinica/Consultorio.jpeg" alt="Imagem interna do consultorio da clinica"></div>
+                     
+                    <div class="everest-card"><img src="./assets/img/Clinica/Interno1.jpeg" alt="Espaço 1"></div>
+                    <div class="everest-card"><img src="./assets/img/Clinica/Interno2.jpeg" alt="Espaço 2"></div>
+                    <div class="everest-card"><img src="./assets/img/Clinica/Interno3.jpeg" alt="Espaço 3"></div>
+                    <div class="everest-card"><img src="./assets/img/Clinica/Interna5.jpeg" alt="Espaço 4"></div>
+                    <div class="everest-card"><img src="./assets/img/Clinica/Aparelhos1.jpeg" alt="Aparelhos1"></div>
+                    <div class="everest-card"><img src="./assets/img/Clinica/Aparelhos2.jpeg" alt="Aparelhos2"></div>                    
+                    
                 </div>
-                <div class="gallery-img">
-                    <img src="/assets/img/Clinica2.jpg" alt="Imagem interna da clinica" />
-                </div>
-                <div class="gallery-img">
-                    <img src="/assets/img/Clinica3.jpeg" alt="Imagem interna da clinica" />
-                </div>
-                <div class="gallery-img">
-                    <img src="/assets/img/clinica4.jpeg" alt="Imagem de um aparelho da Clínica" />
-                </div>
-                <div class="gallery-img">
-                    <img src="/assets/img/aparelhos.jpeg" alt="Imagem de um aparelho da Clínica" />
-                </div>
-                <div class="gallery-img">
-                    <img src="/assets/img/cantinho-cafe.jpeg" alt="Imagem de um aparelho da Clínica" />
-                </div>
-            </div>
+            
+                <div class="everest-indicadores" id="js-pontos"></div>
+            </div>            
         </div>
     </section>
 
-    <section id="atividades-propostas" class="white-bg section">
-        <div class="main-content atividades-content">
-            <h2>Atividades propostas para Você</h2>
-            <p class="atividades-description">
-                Na Everest, oferecemos atividades que vão além do simples cuidado com a saúde. São momentos
-                pensados especialmente para que você atinja o máximo do seu potencial, cuidando do corpo e da mente com
-                muito carinho.
-            </p>
-            <div class="descricao-atividades">
-                <div class="atividade">
-                    <img src="/assets/img/IMG_7381 (2).jpg" alt="Pilates" class="atividade-imagem" />
-                    <div class="atividade-info">
-                        <h3>Pilates</h3>
-                        <p>
-                            Um treino focado no equilíbrio entre força, flexibilidade e respiração. Ideal para quem
-                            busca melhorar o tônus muscular e aumentar a mobilidade.
-                        </p>
-                    </div>
-                </div>
-                <div class="atividade">
-                    <img src="/assets/img/gestante.jpg" alt="Pilates para Gestantes" class="atividade-imagem" />
-                    <div class="atividade-info">
-                        <h3>Pilates para Gestantes e 
-                            Fisioterapia Pélvica</h3>
-                        <p>
-                            Cuide de você e do seu bebê com atividades pensadas para garantir mais conforto e bem-estar durante e após a Gestação.
-                        </p>
-                    </div>
-                </div>
-                <div class="atividade">
-                    <img src="/assets/img/FISIO-ESPORTIVA.jpg" alt="Fisioterapia Esportiva" class="atividade-imagem" />
-                    <div class="atividade-info">
-                        <h3>Fisioterapia Esportiva</h3>
-                        <p>
-                            Nosso foco é recuperar e prevenir lesões, além de otimizar seu desempenho esportivo, com
-                            tratamentos personalizados para atletas de todos os níveis.
-                        </p>
-                    </div>
-                </div>
-                <div class="atividade">
-                    <img src="/assets/img/quiropraxia.jpg" alt="Quiropraxia" class="atividade-imagem" />
-                    <div class="atividade-info">
-                        <h3>Quiropraxia</h3>
-                        <p>
-                            Cuide da sua coluna e alívio de dores com a quiropraxia, técnica que visa corrigir
-                            desalinhamentos, restaurando o equilíbrio do corpo.
-                        </p>
-                    </div>
-                </div>
-                <div class="atividade">
-                    <img src="/assets/img/dor.jpg" alt="Tratamento da Dor" class="atividade-imagem" />
-                    <div class="atividade-info">
-                        <h3>Tratamento da Dor</h3>
-                        <p>
-                            Enfrentando dores crônicas? Nossa fisioterapia focada no tratamento da dor proporciona
-                            alívio e melhora significativa na qualidade de vida.
-                        </p>
-                    </div>
-                </div>
-                <div class="atividade">
-                    <img src="/assets/img/nutricao.jpg" alt="Nutrição" class="atividade-imagem" />
-                    <div class="atividade-info">
-                        <h3>Nutrição</h3>
-                        <p>
-                            Oferecemos orientação nutricional personalizada para ajudar você a alcançar seus objetivos
-                            de saúde e manter um estilo de vida saudável.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- Inicio atividade proposta -->
+
+    <section id="atividade" class="mosaico-secao-compacta">
+    <div class="mosaico-topo-compacto">
+        <p>Serviços</p>
+        <h2>Atividades Propostas</h2>
+    </div>
+
+    <div class="mosaico-grid-compacto">
+        <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/fundoBruna.jpg" alt="Pilates"></div>
+        <div class="mosaico-card-comp texto azul-marinho">
+            <h3>Pilates</h3>
+            <p>Treino focado no equilíbrio, força e mobilidade.</p>
         </div>
-    </section>
+     <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/gestante.jpg" alt="Gestante"></div>
+        <div class="mosaico-card-comp texto turquesa">
+            <h3>Gestantes</h3>
+            <p>Conforto e bem-estar para você e seu bebê.</p>
+        </div>
+        
+        
+        <div class="mosaico-card-comp texto azul-marinho">
+            <h3>Fisiorterapia</h3>
+            <p>Recuperação e prevenção de lesões esportivas.</p>
+        </div>
+        <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/FISIO-ESPORTIVA.jpg" alt="Fisioterapia"></div>
+
+        <div class="mosaico-card-comp texto turquesa">
+            <h3>Quiropraxia</h3>
+            <p>Alinhamento e restauração do equilíbrio do corpo.</p>
+        </div>
+        <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/quiropraxia.jpg" alt="Quiropraxia"></div>
+
+        <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/dor.jpg" alt="Dor"></div>
+        <div class="mosaico-card-comp texto azul-marinho">
+            <h3>Tratamento Dor</h3>
+            <p>Alívio especializado para dores crônicas.</p>
+        </div>
+
+        <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/nutricao.jpg" alt="Nutrição"></div>
+        <div class="mosaico-card-comp texto turquesa">
+            <h3>Nutrição</h3>
+            <p>Orientação personalizada para metas de saúde.</p>
+        </div>
+        
+    </div>
+</section>
+
 
     <!-- Nossa Equipe -->
 
-    <section id="equipe" class="fisioterapia first-bg section">
-        <div class="main-content fisioterapia-content">
-            <section class="team-section">
-                <h2>Nossa Equipe</h2>
-                <div class="team-container">
-                    <!-- Card 1 -->
-                    <div class="team-member">
-                        <img src="assets/img/Bruna.jpg" alt="Foto do funcionário">
-                        <h3>Bruna Dutra</h3>
-                        <p>Fisioterapeuta</p>
-                        <p>Especializada em Movimento Humano e Dor.
-                            Atendendo a área de Fisioterapia esportiva, 
-                            Quiropraxia e Dor.</p>
-                        <a href="https://www.instagram.com/brunavdutra/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="team-member">
-                        <img src="assets/img/Rayanne.jpeg" alt="Foto do funcionário">
-                        <h3>Rayane Dutra</h3>
-                        <p>Nutricionista</p>
-                        <p>Apaixonada pelo mundo da nutrição estética e acredita que não existe dieta, e sim um estilo
-                            de vida.
-                        </p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="team-member">
-                        <img src="assets/img/Euler.jpg" alt="Foto do funcionário">
-                        <h3>Euler Costa</h3>
-                        <p>Gestor</p>
-                        <p>Responsável por fazer a magia acontecer. É o emite suas Notas Fiscais, Compra o que esta faltando para nosso espaço e deixa tudo sempre funcionando bem!</p>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="team-member">
-                        <img src="assets/img/Vanessa.jpg" alt="Foto do funcionário">
-                        <h3>Vanessa Reis</h3>
-                        <p>Fisioterapeuta - Pilates</p>
-                        <p>Apaixonada por idosos e pela reabilitação. Utiliza o Pilates como um método de reabilitação e prática regular de exercícios físico.</p>
-                    </div>
+<section id="equipe" class="premium-bio-section">
+    <div class="premium-container">
+        
+        <div class="premium-content">
+            <span class="premium-kicker">SOBRE A PROFISSIONAL</span>
+            <h2 class="premium-name">BRUNA DUTRA</h2>
+            
+            <p class="premium-description">
+                Fisioterapeuta especializada em Movimento Humano e Dor. Apaixonada por promover o bem-estar integral, Bruna combina técnicas avançadas de <strong>Fisioterapia Esportiva, Quiropraxia e tratamento da Dor</strong> com um atendimento humanizado, potencializando a saúde e a qualidade de vida de seus pacientes na Clínica Everest.
+            </p>
 
-
-                    <!-- Card 5 -->
-                    <div class="team-member">
-                        <img src="assets/img/Mayra.jpg" alt="Foto do funcionário">
-                        <h3>Mayra Fiuza</h3>
-                        <p>Fisioterapeuta - Pilates</p>
-                        <p>
-                            Pratica exercícios desde os 15 anos e acredita que o Movimento é capaz de transformar vidas.</p>
-                    </div>
-                </div>
-            </section>
+            <a href="https://www.instagram.com/brunavdutra/" target="_blank" class="premium-btn-instagram">
+                <i class='bx bxl-instagram'></i> SIGA NO INSTAGRAM
+            </a>
         </div>
-    </section>
+
+        <div class="premium-image-wrapper">
+            <div class="image-ring">
+                <img src="assets/img/Bruna.jpg" alt="Dra. Bruna Dutra - Fisioterapeuta">
+            </div>
+        </div>
+
+    </div>
+</section>
+    
 
     <!-- / Nossa Equipe -->
 
     <!--Footer-->
 
-    <div id="Localizacao" class="services first-bg">
-        <h2>Venha Conhecer</h2>
-        <p><strong>Estamos localizados</strong> Av. Marte, 224 - Jardim Riacho das Pedras <br> Contagem - MG</p>
+<section id="contato" class="contato-secao">
+    <div class="contato-topo">
+        <p>Contato</p>
+        <h2>Fale Conosco</h2>
+        <p class="contato-legenda">Entre em contato conosco em um de nossos canais de sua preferência</p>
     </div>
 
-    <iframe width="100%"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.048925868788!2d-44.05027732493109!3d-19.97437344302995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690bb6b0c6057%3A0x4f972a8e1a450618!2sAv.%20Marte%2C%20224%20-%20Jardim%20Riacho%20das%20Pedras%2C%20Contagem%20-%20MG%2C%2032241-395!5e0!3m2!1spt-BR!2sbr!4v1693151182879!5m2!1spt-BR!2sbr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-
-    <footer class="footer">
-        <div class="footer-icons">
-            <a href="https://www.instagram.com/everestfisio/" target="_blank">
-                <i class="fa-brands fa-instagram fa-1x"></i>
+    <div class="contato-box-principal">
+        <div class="contato-item">
+            <div class="contato-icone">
+                <i class='bx bxl-whatsapp'></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <a href="https://api.whatsapp.com/send?phone=5531971036856" target="_blank" class="contato-botao-branco">
+                Agende seu horário
             </a>
-            <p><strong>#Siga nosso instagram</strong></p>
         </div>
-        <div>
+
+      <div class="contato-item divisor-lateral">
+            <div class="contato-icone">
+                <i class='bx bxl-instagram'></i>
+            </div>
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/everestfisio/" target="_blank" class="contato-botao-branco">
+                Siga nosso perfil
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section id="Localizacao" class="localizacao-container">
+    <div class="localizacao-content">
+        <div class="info-texto">
+            <h2>Venha Conhecer</h2>
+            <p><strong>Estamos localizados:</strong><br>
+            Av. Marte, 224 - Jardim Riacho das Pedras<br>
+            Contagem - MG</p>
+            
+            <a href="https://maps.google.com/maps?daddr=Av.+Marte,+224+-+Jardim+Riacho+das+Pedras,+Contagem+-+MG" 
+               target="_blank" class="btn-rota">
+               <i class='bx bx-map-alt'></i> Como Chegar
+            </a>
+        </div>
+    </div>
+    
+    <div class="mapa-wrapper">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.645714392437!2d-44.0416!3d-19.9592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU3JzMzLjEiUyA0NMKwMDInMjkuOCJX!5e0!3m2!1spt-BR!2sbr!4v123456789" 
+            allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<!--FOOTER  -->
+
+<footer class="footer-premium">
+    <div class="footer-container">
+        <div class="footer-column">
             <a href="#Home">
-                <img src="assets/img/logo-footer.png" alt="Logo Everest">
+                <img src="assets/img/logo-footer.png" alt="Logo Everest" class="footer-logo">
             </a>
+            <p class="footer-motto">Você no topo da sua saúde.</p>
         </div>
 
-        <p>©2025 | Everest - Todos direitos reservados.</p>
-    </footer>
+        <div class="footer-column">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#SobreNos">Sobre Nós</a></li>
+                <li><a href="#gallery">Clínica</a></li>
+                <li><a href="#atividades-propostas">Serviços</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Siga-nos</h3>
+            <div class="footer-social-link">
+                <a href="https://www.instagram.com/everestfisio/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Everest - Pilates | Fisioterapia Esportiva </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>©2026 | Everest - Todos os direitos reservados.</p>
+    </div>
+</footer>
 
     <!-- Button Whatsapp -->
     <a href="https://api.whatsapp.com/send?phone=5531971036856&text=Ola%20Everest!%0A%0AGostaria%20de%20agendar%20uma%20aula%20experimental!"
@@ -306,9 +320,6 @@
         <span class="tooltip-text">Agende sua Aula!</span>
     </a>
     <script src="assets/script.js"></script>
-</body>
-
-</html>
 </body>
 
 </html>
