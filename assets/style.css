@@ -233,10 +233,12 @@ li {
 @media (max-width: 600px) {
     .mosaico-grid-compacto {
         grid-template-columns: 1fr; /* Vira 1 coluna no celular */
+        gap: 5px;
     }
     .mosaico-card-comp {
         height: auto;
         min-height: 250px;
+        
     }
 }
 
@@ -347,6 +349,9 @@ li {
         width: 400px;
         height: 400px;
     }
+    .premium-description {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -365,7 +370,7 @@ li {
     }
 
     .premium-description {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
     
     /* No celular, a imagem pode ficar um pouco menor */
