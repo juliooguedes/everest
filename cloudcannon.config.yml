@@ -1,0 +1,19 @@
+# Configuração Básica do CloudCannon para Site Estático
+
+# Define onde estão os arquivos do site (o ponto significa "aqui mesmo")
+source: .
+
+# Onde o CloudCannon deve salvar as imagens que o cliente enviar?
+# Isso é importante para não bagunçar seu projeto.
+uploads_dir: /assets/img/uploads
+
+# Configurações do Editor Visual
+editor:
+  default_path: /
+
+# Diz para o CloudCannon tratar seus HTMLs como páginas editáveis
+collections_config:
+  pages:
+    path: .
+    glob: "**/*.html"
+    name: Páginas
