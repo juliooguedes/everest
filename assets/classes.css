@@ -1,5 +1,5 @@
 .main-bg {
-    padding-top: 50px;
+    padding-top: 70px;
     background-image: linear-gradient(to bottom, rgba(20, 157, 188, 0.397), var(--third-color)), url('./img/fundoBruna.jpg');
     background-size: cover ;    
     background-position: center center;

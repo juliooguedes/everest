@@ -1,84 +1,271 @@
-.intro-content {
+.intro {
     position: relative;
-    display: grid;
-    grid-template-columns: 1.5fr 1.0fr;
-    gap: var(--gap);
-    min-height: 90vh;
-}
-
-.intro-text-content {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-
-.intro-text-content h2 {
-    color: var(--white-color);
-    text-shadow: 3px 5px 10px rgba(245, 132, 33, 0.418);
-    font-size: 80px;
-}
-
-.intro-text-content span {
-    text-decoration: underline;
-    text-decoration-color: var(--first-color);
-    text-decoration-thickness: 10px;
-    text-shadow: 1px 2px 5px rgba(245, 139, 33, 0.493);
-}
-
-
-/*Botão Aula Experimental */
-.btn-aulaExperimetal {
-    width: 250px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: rgb(44, 188, 99);
-    color: var(--white-color);
-}
-
-.btn-aulaExperimetal:hover {
-    background-color: rgb(38, 211, 104);
-}
-
-.btn-aulaExperimetal:focus {
-    outline: 2px dashed var(--white-color);
-    outline-offset: 4px;
-}
-
-
-/* Sobre Nós */
-.sobrenos-content {
-    max-width: 100rem;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    text-align: justify;
-    min-height: 100vh;
-    color: var(--second-color);
-}
+    
+    overflow: hidden;
 
-li {
-    font-size: 1.8rem;
-}
-
-.title-sobrenos {
-    margin-bottom: 30px;
-    color: var(--third-color);
-    display: flex;
-}
-
-.logo-sobrenos {
-    margin-top: 5rem;
-    display: flex;    
-    justify-content: center;
+    /* Gradiente focado na esquerda para escurecer apenas onde o texto está */
+    background-image: 
+        linear-gradient(to right, rgba(0, 50, 71, 0.95) 10%, rgba(0, 50, 71, 0.7) 100%),
+        url('./img/fundoBruna.jpg');
+    
+    /* background-position: right centraliza a moça e os aparelhos à direita */
+    
+    /* 'cover' ainda é o melhor para preenchimento, mas o 'right center' evita o zoom no rosto */
+    background-size: cover; 
     
 }
 
-.logo-sobrenos img {
-    width: 220px;
-    height: 130px;
+.intro-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 4rem; /* Aumenta o recuo da borda esquerda */
+    width: 100%;
+    display: flex; 
+    justify-content: flex-start; /* Garante que o texto fique no canto esquerdo */
+}
+
+.texto-wrapper {
+    max-width: 550px; /* Reduz um pouco a largura para não cobrir a moça da foto */
+    text-align: left;
+}
+/* Kicker (Texto Pequeno: REFERÊNCIA EM CONTAGEM) */
+.home-kicker {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--first-color); /* Laranja */
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* Título Principal (SUA SAÚDE...) */
+.texto-wrapper h1 {
+    color: #ffffff; /* Branco Puro */
+    font-size: 6rem; /* Tamanho Grande */
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    /* Sombrinha suave para destacar do fundo */
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Destaque "NO TOPO" com fundo laranja */
+.text-highlight-laranja {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    z-index: 0;
+}
+
+.text-highlight-laranja::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    right: -10px;
+    height: 18px; /* Altura do marca-texto */
+    background-color: var(--first-color); /* Laranja */
+    z-index: -1;
+    transform: skewX(-10deg); /* Inclinação estilosa */
+}
+
+/* Subtítulo */
+.home-subtitulo {
+    font-size: 1.8rem;
+    color: #e0e0e0; /* Cinza bem clarinho */
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 550px; /* Não deixa a linha ficar comprida demais */
+}
+
+/* Botão Agendar */
+.btn-home-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--first-color); /* Laranja */
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(245, 132, 33, 0.4);
+}
+
+.btn-home-premium:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+    color: var(--first-color);
+}
+
+.btn-home-premium i {
+    font-size: 2.2rem;
+}
+
+/* --- RESPONSIVIDADE (CELULAR) --- */
+@media (max-width: 768px) {
+    .intro {
+        background-attachment: scroll; /* Desliga parallax no mobile */
+        /* Gradiente mais forte no celular para garantir leitura */
+        background-image: 
+            linear-gradient(to bottom, rgba(0, 50, 71, 0.8), rgba(0, 50, 71, 0.9)),
+            url('./img/fundoBruna.jpg');
+        align-items: center;
+        text-align: center; /* Centraliza tudo no celular */
+    }
+
+    .intro-content {
+        justify-content: center;
+    }
+
+    .texto-wrapper h1 {
+        font-size: 3.5rem; /* Título menor */
+    }
+
+    .home-subtitulo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-home-premium {
+        width: 100%; /* Botão ocupa a largura toda */
+        justify-content: center;
+    }
+}
+
+/* Sobre Nós */
+/* --- Sobre Nós Estilo Cartão com Fundo Sólido --- */
+
+/* O Fundo Azul Branco */
+.sobre-secao {
+    background-color: var(--white-color); 
+    padding: 100px 20px; /* Espaçamento generoso em cima e embaixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height retirado para não forçar altura se o conteúdo for menor */
+}
+
+/* O Cartão  Central */
+.sobre-card-central {
+    background-color:var(--third-color);
+
+    max-width: 900px; /* Um pouco mais largo para o texto respirar */
+    width: 100%;
+    padding: 70px 50px;
+    border-radius: 8px; /* Bordas arredondadas mais modernas */
+    /* Sombra mais suave, já que não precisa "flutuar" tanto sobre o azul */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2); 
+    text-align: center;
+    /* Detalhe laranja no topo para conectar com a marca */
+    border-top: 6px solid var(--first-color); 
+}
+
+/* Tipografia */
+.kicker-laranja {
+    display: block;
+    color: var(--first-color);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.titulo-moderno {
+    font-size: 4rem;
+    color: var(--white-color);
+    line-height: 1.1;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.destaque-azul {
+    color: var(--second-color); /* Turquesa */
+}
+
+.texto-separador p {
+    font-size: 1.7rem;
+    color: var(--white-color); /* Cinza para leitura confortável */
+    margin-bottom: 25px;
+    line-height: 1.8;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid de Estatísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 2px solid #f0f0f0; /* Linha divisória sutil */
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: var(--white-color);
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.stat-item i {
+    font-size: 3rem;
+    color: var(--first-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.stat-item p {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.mini-logo-final {
+    width: 70px;
+    margin: 50px auto 0;
+    opacity: 0.4;
+    filter: grayscale(100%); /* Deixa o logo cinza para não brigar com o resto */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-secao-fundo-azul {
+        padding: 60px 15px;
+    }
+    
+    .sobre-card-central {
+        padding: 40px 25px;
+    }
+
+    .titulo-moderno {
+        font-size: 2.8rem;
+    }
+    
+    .texto-separador p {
+        font-size: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* Um embaixo do outro */
+        gap: 40px;
+    }
 }
 
 
@@ -743,7 +930,7 @@ li {
 }
 
 .footer-column h3 {
-    color: var(--second-color); /* O bronze/dourado que usamos na seção de contato */
+    color: var(--second-color); 
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: 600;
@@ -817,43 +1004,102 @@ li {
 
 /* Button Whatsapp*/
 
+/* Button Whatsapp Flutuante */
 .btn-whatsapp {
     position: fixed;
-    bottom: 14px;
+    bottom: 24px;
     right: 24px;
-    z-index: 99;
+    z-index: 9999; /* Garante que fique na frente de tudo */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
 }
 
 .btn-whatsapp img {
-    max-width: 74px;
-    transition: transform 0.4s;
+    max-width: 60px; /* Tamanho levemente maior para destaque */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito de pulo suave */
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.2)); /* Sombra no ícone */
 }
 
-.btn-whatsapp img:hover {
+.btn-whatsapp:hover img {
     transform: scale(1.1);
 }
 
-.btn-whatsapp .tooltip-text {
-    visibility: hidden;
-    position: absolute;
-    width: 120px;
-    top: 10px;
-    left: -144px;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: var(--white-color);
-    color: var(--second-color);
-    text-shadow: 0px 8px 15px rgba(118, 248, 209, 0.568);
-    opacity: 0;
-    transition: opacity 0.4s;
+/* --- Botão WhatsApp Flutuante --- */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    /* Centraliza o ícone dentro da área do link */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Imagem do ícone */
+.btn-whatsapp img {
+    max-width: 60px; /* Tamanho bom para desktop e mobile */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.2));
+}
+
+.btn-whatsapp:hover img {
+    transform: scale(1.1); /* Efeito de crescer */
+}
+
+/* --- O Tooltip (Caixinha Branca) --- */
+.btn-whatsapp .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    
+    /* Tamanho e Comportamento do Texto */
+    width: max-content; /* O SEGREDO: A caixa se adapta ao tamanho do texto */
+    max-width: 200px;   /* Mas não deixa ficar gigante */
+    background-color: var(--white-color, #fff);
+    color: var(--second-color, #005f73);
+    
+    /* Design */
+    text-align: center;
+    padding: 8px 16px; /* Espaçamento interno equilibrado */
+    border-radius: 50px; /* Bordas arredondadas (Pílula) */
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    
+    /* Sombras (Tirei o text-shadow sujo e pus na caixa) */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-shadow: none; 
+    
+    /* POSICIONAMENTO AUTOMÁTICO */
+    position: absolute;
+    top: 50%;             /* 1. Vai para o meio vertical do botão */
+    right: 100%;          /* 2. Cola na borda ESQUERDA do botão */
+    margin-right: 15px;   /* 3. Dá um espacinho para não grudar */
+    transform: translateY(-50%) translateX(10px); /* 4. Ajuste fino da centralização */
+    
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+/* Efeito ao passar o mouse */
 .btn-whatsapp:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+    transform: translateY(-50%) translateX(0); /* Desliza suavemente */
 }
 
+/* (Opcional) Setinha apontando para o ícone */
+.btn-whatsapp .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    margin-top: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--white-color, #fff);
+}
 @media (max-width: 768px) {
 
     .intro-text-content h2 {
@@ -907,59 +1153,7 @@ li {
         text-align: center;
     }
 
-    .menu {
-        bottom: 0;
-        text-align: center;
-    }
-
-
-    .menu-content,
-    .menu-content ul {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .menu-content {
-        height: 100vh;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .close-menu {
-        display: none;
-    }
-
-
-    .close-menu-label::after {
-        content: '☰';
-        position: fixed;
-        z-index: 2;
-        top: 2rem;
-        right: 2rem;
-        background: transparent;
-        color: var(--first-color);
-        font-size: 3rem;
-        line-height: 3rem;
-        width: 3rem;
-        height: 3rem;
-        text-align: center;
-        padding: 0.5rem;
-        cursor: pointer;
-    }
-
-    .close-menu:checked~.menu {
-        display: block;
-    }
-
-    .close-menu:checked~.close-menu-label::after {
-        content: '×';
-    }
-
-    .menu-spacing {
-        display: none;
-    }
+    
 
     .services {
         padding: 3rem 1rem;

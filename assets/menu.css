@@ -6,57 +6,135 @@
     width: 100%;
     border-bottom: 1.0 solid var(--first-color);
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com leve transparência */
+    backdrop-filter: blur(10px); /* Efeito de vidro para modernidade */
+    box-shadow: 0 4px 20px rgba(0, 50, 71, 0.08); /* Sombra suave usando a cor da marca */
+    transition: all 0.3s ease;
 }
 
 .menu-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 1.5rem 2rem; /* Mais fino para não roubar espaço */
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 .menu h1 {
     font-size: 2.3rem;
-    color: var(--second-color);
+    color: var(--third-color); /* Azul Escuro */
     text-decoration: none;
 }
 
 .menu h1 a {
-    color: var(--second-color);
+    color: var(--third-color); /* Azul Escuro */
 }
 
 .logo-menu {
     padding-top: 1rem;
-    width: 20rem;
+    width: 18rem;
     height: 7rem;
 }
 
+/* Links do Menu */
 .menu ul {
     list-style: none;
     display: flex;
+    gap: 5px; /* Espacinho entre os botões */
 }
 
 .menu ul li a {
     display: block;
-    padding: 1.5rem;
-    font-size: 1.8rem;
-    color: var(--second-color);
+    padding: 1rem 1.5rem;
+    font-size: 1.6rem; /* Tamanho ideal para leitura */
+    font-weight: 600; /* Um pouco mais encorpado */
+    
+    /* MUDANÇA IMPORTANTE: Azul Escuro para leitura principal */
+    color: var(--third-color); 
+    
+    text-transform: uppercase; /* Mais profissional */
+    letter-spacing: 0.5px;
     position: relative;
+    transition: color 0.3s ease;
 }
 
+/* A linha animada embaixo do link */
 .menu ul li a::after {
     content: '';
     position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    width: 0;
-    height: 0.2rem;
-    background: var(--first-color);
-    transition: all 300ms ease-in-out;
+    bottom: 5px; /* Mais colado no texto */
+    left: 0;
+    width: 0; /* Começa invisível */
+    height: 3px; /* Linha um pouco mais grossa e visível */
+    background: var(--first-color); /* Laranja da marca */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Efeito ao Passar o Mouse */
+.menu ul li a:hover {
+    color: var(--first-color); /* Texto vira Laranja */
 }
 
 .menu ul li a:hover::after {
-    width: 50%;
-    left: 25%;
+    width: 100%; /* A linha cresce para o tamanho total */
+}
+
+@media (max-width: 768px) {
+
+.menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: transparent;
+        color: var(--first-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .menu-spacing {
+        display: none;
+    }
+
 }

@@ -61,19 +61,19 @@
     <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1 id="menu-logo">
+            <div id="menu-logo" class="menu-logo">
                 <a href="#Home">
-                    <img class="logo-menu" src="./assets/img/logo.png" alt="Logo Everest">
+                    <img class="logo-menu" src="./assets/img/Logo/Everest_Logotipo.png" alt="Logo Everest">
                 </a>
-            </h1>
+            </div>
             <nav>
                 <ul id="menu-links">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#SobreNos">Sobre Nós</a></li>
-                    <li><a href="#gallery">Clínica</a></li>
-                    <li><a href="#atividade">Serviços</a></li>
-                    <li><a href="#equipe">Profissional</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#Clinica">Clínica</a></li>
+                    <li><a href="#Servicos">Serviços</a></li>
+                    <li><a href="#Profissional">Profissional</a></li>
+                    <li><a href="#Contato">Contato</a></li>
                     <li><a href="#Localizacao">Localização</a></li>
                 </ul>
             </nav>
@@ -84,42 +84,67 @@
 
     <section id="Home" class="intro main-bg section">
         <div class="main-content intro-content">
-            <div class="intro-text-content">
-                <h2>Você <br> <span class="destaque"> no topo </span><br>da sua saúde</h2>
-                <a class="btn-aulaExperimetal"
+            <div class="texto-wrapper">
+                <span class="home-kicker">REFERÊNCIA EM CONTAGEM</span>
+    
+                <h1>
+                    Você <br>
+                    <span class="text-highlight-laranja">no topo</span> <br>
+                    da sua saúde.
+                </h1>
+    
+                <p class="home-subtitulo">
+                    Fisioterapia Especializada e Pilates com tecnologia de ponta e atendimento humanizado. Recupere seu
+                    bem-estar na Clínica Everest.
+                </p>
+    
+                <a class="btn-home-premium"
                     href="https://api.whatsapp.com/send?phone=5531971036856&text=Ola%20Everest!%0A%0AGostaria%20de%20agendar%20uma%20aula%20experimental!"
-                    target="_blank">Aula Experimental</a>
+                    target="_blank">
+                    <i class='bx bxl-whatsapp'></i> Agendar Aula Experimental
+                </a>
             </div>
         </div>
     </section>
-
-    <section id="SobreNos" class="white-bg section">
-        <div class="main-content sobrenos-content">
-            <h2 class="title-sobrenos">Everest - Fisioterapia e Pilates</h2>
-            
-            <div class="editable">
-                <p>
-                    A clinica foi criada com o propósito de oferecer saúde de qualidade e cuidado personalizado. Com
-                    especialização na área ortopédica, nossos serviços incluem Pilates, Fisioterapia Esportiva, Nutrição,
-                    Fisioterapia Pélvica, Massagens e muito mais.</p>
-
-                <p>Cada atendimento é planejado para proporcionar conforto, bem-estar e resultados eficazes, sempre em um
-                    ambiente acolhedor, com tecnologia moderna e equipamentos de ponta</p>
-
-                <p>Facilitamos a sua jornada de reabilitação e promoção da saúde com excelência e compromisso.</p>
-                <br>
-                <p><strong>Nosso objetivo é ajudar você a alcançar o topo da sua saúde!</strong></p>
-            </div>
-
-            <div class="logo-sobrenos">
-                <img src="./assets/img/Logo/Everest_Submarca.png" alt="Logo Everest Sobre nós">
-            </div>
-
+<!--SOBRE NOS INICIO-->
+<section id="SobreNos" class="sobre-secao">
+    
+    <div class="sobre-card-central">
+        <span class="kicker-laranja">Sobre Nós</span>
+        <h2 class="titulo-moderno">Everest<br><span class="destaque-azul">Fisioterapia e Pilates</span></h2>
+        
+        <div class="texto-separador">
+            <p>
+                A clinica foi criada com o propósito de oferecer saúde de qualidade e cuidado personalizado. Com especialização na área ortopédica, nossos serviços incluem Pilates, Fisioterapia Esportiva, Nutrição, Fisioterapia Pélvica, Massagens e muito mais. </p>
+            <p>
+Cada atendimento é planejado para proporcionar conforto, bem-estar e resultados eficazes, sempre em um ambiente acolhedor, com tecnologia moderna e equipamentos de ponta</p>
+<p><strong>Nosso objetivo é ajudar você a alcançar o topo da sua saúde!</strong></p>
         </div>
-    </section>
 
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>+1000</h3>
+                <p>Pacientes Atendidos</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Foco em Você</p>
+            </div>
+            <div class="stat-item">
+                <i class='bx bxs-star'></i>
+                <p>Excelência</p>
+            </div>
+        </div>
+        
+        <img src="./assets/img/Logo/Everest_Submarca.png" alt="Logo Everest" class="mini-logo-final">
+    </div>
 
-    <section id="gallery" class="mosaico-secao-fotos">
+</section>
+
+<!--SOBRE NOS FIM-->
+
+<!--CLINICA INICIO-->
+    <section id="Clinica" class="mosaico-secao-fotos">
         <div class="mosaico-topo-fotos">
             <h2>Nosso Espaço</h2>
             <p>Tudo preparado com o maior amor para te receber.</p>
@@ -147,74 +172,76 @@
         </div>
     </section>
 
-    <section id="atividade" class="mosaico-secao-compacta">
+    <!--CLINICA FIM-->
+    <!-- SERVIÇOS INICIO -->
+
+    <section id="Servicos" class="mosaico-secao-compacta">
         <div class="mosaico-topo-compacto">
             <p>Serviços</p>
             <h2>Atividades Propostas</h2>
         </div>
 
         <div class="mosaico-grid-compacto">
-            <div class="mosaico-card-comp foto editable"><img src="./assets/img/Atividade Proposta/fundoBruna.jpg" alt="Pilates">
+            <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/fundoBruna.jpg" alt="Pilates">
             </div>
             <div class="mosaico-card-comp texto azul-marinho">
                 <h3>Pilates</h3>
-                <p class="editable">Treino focado no equilíbrio, força e mobilidade.</p>
+                <p>Treino focado no equilíbrio, força e mobilidade.</p>
             </div>
-            
-            <div class="mosaico-card-comp foto editable"><img src="./assets/img/Atividade Proposta/gestante.jpg" alt="Gestante">
+            <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/Gestante.jpg" alt="Gestante">
             </div>
             <div class="mosaico-card-comp texto turquesa">
                 <h3>Gestantes</h3>
-                <p class="editable">Conforto e bem-estar para você e seu bebê.</p>
+                <p>Conforto e bem-estar para você e seu bebê.</p>
             </div>
 
 
             <div class="mosaico-card-comp texto azul-marinho">
                 <h3>Fisioterapia</h3>
-                <p class="editable">Recuperação e prevenção de lesões esportivas.</p>
+                <p>Recuperação e prevenção de lesões esportivas.</p>
             </div>
-            <div class="mosaico-card-comp foto editable"><img src="./assets/img/Atividade Proposta/FISIO-ESPORTIVA.jpg"
+            <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/FISIO-ESPORTIVA.jpg"
                     alt="Fisioterapia"></div>
 
             <div class="mosaico-card-comp texto turquesa">
                 <h3>Quiropraxia</h3>
-                <p class="editable">Alinhamento e restauração do equilíbrio do corpo.</p>
+                <p>Alinhamento e restauração do equilíbrio do corpo.</p>
             </div>
-            <div class="mosaico-card-comp foto editable"><img src="./assets/img/Atividade Proposta/quiropraxia.jpg"
+            <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/quiropraxia.jpg"
                     alt="Quiropraxia"></div>
 
-            <div class="mosaico-card-comp foto editable"><img src="./assets/img/Atividade Proposta/dor.jpg" alt="Dor"></div>
+            <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/dor.jpg" alt="Dor"></div>
             <div class="mosaico-card-comp texto azul-marinho">
                 <h3>Tratamento Dor</h3>
-                <p class="editable">Alívio especializado para dores crônicas.</p>
+                <p>Alívio especializado para dores crônicas.</p>
             </div>
 
-            <div class="mosaico-card-comp foto editable"><img src="./assets/img/Atividade Proposta/nutricao.jpg" alt="Nutrição">
+            <div class="mosaico-card-comp foto"><img src="./assets/img/Atividade Proposta/nutricao.jpg" alt="Nutrição">
             </div>
             <div class="mosaico-card-comp texto turquesa">
                 <h3>Nutrição</h3>
-                <p class="editable">Orientação personalizada para metas de saúde.</p>
+                <p>Orientação personalizada para metas de saúde.</p>
             </div>
 
         </div>
     </section>
 
+    <!-- SERVIÇOS FIM -->
+    <!-- PROFISSIONAL INICIO -->
 
     <section id="equipe" class="premium-bio-section">
         <div class="premium-container">
 
             <div class="premium-content">
                 <span class="premium-kicker">SOBRE A PROFISSIONAL</span>
-                <h2 class="premium-name editable">BRUNA DUTRA</h2>
+                <h2 class="premium-name">BRUNA DUTRA</h2>
 
-                <div class="editable">
-                    <p class="premium-description">
-                        Fisioterapeuta especializada em Movimento Humano e Dor. Apaixonada por promover o bem-estar
-                        integral, Bruna combina técnicas avançadas de <strong>Fisioterapia Esportiva, Quiropraxia e
-                            tratamento da Dor</strong> com um atendimento humanizado, potencializando a saúde e a qualidade
-                        de vida de seus pacientes na Clínica Everest.
-                    </p>
-                </div>
+                <p class="premium-description">
+                    Fisioterapeuta especializada em Movimento Humano e Dor. Apaixonada por promover o bem-estar
+                    integral, Bruna combina técnicas avançadas de <strong>Fisioterapia Esportiva, Quiropraxia e
+                        tratamento da Dor</strong> com um atendimento humanizado, potencializando a saúde e a qualidade
+                    de vida de seus pacientes na Clínica Everest.
+                </p>
 
                 <a href="https://www.instagram.com/brunavdutra/" target="_blank" class="premium-btn-instagram">
                     <i class='bx bxl-instagram'></i> SIGA NO INSTAGRAM
@@ -222,7 +249,7 @@
             </div>
 
             <div class="premium-image-wrapper">
-                <div class="image-ring editable">
+                <div class="image-ring">
                     <img src="assets/img/Bruna.jpg" alt="Dra. Bruna Dutra - Fisioterapeuta">
                 </div>
             </div>
@@ -230,6 +257,10 @@
         </div>
     </section>
 
+
+    <!-- PROFISSIONAL FIM -->
+
+    <!-- CONTATO INICIO -->
 
     <section id="contato" class="contato-secao">
         <div class="contato-topo">
@@ -262,17 +293,16 @@
         </div>
     </section>
 
+<!-- CONTATO FIM -->
+ <!-- LOCALIZACAO INICIO -->
 
     <section id="Localizacao" class="localizacao-container">
         <div class="localizacao-content">
             <div class="info-texto">
                 <h2>Venha Conhecer</h2>
-                
-                <div class="editable">
-                    <p><strong>Estamos localizados:</strong><br>
-                        Av. Marte, 224 - Jardim Riacho das Pedras<br>
-                        Contagem - MG</p>
-                </div>
+                <p><strong>Estamos localizados:</strong><br>
+                    Av. Marte, 224 - Jardim Riacho das Pedras<br>
+                    Contagem - MG</p>
 
                 <a href="https://maps.google.com/maps?daddr=Av.+Marte,+224+-+Jardim+Riacho+das+Pedras,+Contagem+-+MG"
                     target="_blank" class="btn-rota">
@@ -288,6 +318,9 @@
             </iframe>
         </div>
     </section>
+
+    <!-- LOCALIZACAO FIM -->
+    <!--FOOTER INICIO  -->
 
     <footer class="footer-premium">
         <div class="footer-container">
@@ -326,12 +359,13 @@
             <p>©2026 | Everest - Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <a href="https://api.whatsapp.com/send?phone=5531971036856&text=Ola%20Everest!%0A%0AGostaria%20de%20agendar%20uma%20aula%20experimental!"
-        class="btn-whatsapp" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
-        <img cla src="assets/img/whatssapp.svg" alt="icone whatsapp">
-        <span class="tooltip-text">Agende sua Aula!</span>
-    </a>
+    <!--FOOTER   -->
+    <!-- Button Whatsapp -->
+<a href="https://api.whatsapp.com/send?phone=5531971036856&text=Ola%20Everest!%0A%0AGostaria%20de%20agendar%20uma%20aula%20experimental!"
+    class="btn-whatsapp" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
+    <img class="img-wpp" src="assets/img/whatssapp.svg" alt="Ícone WhatsApp">
+    <span class="tooltip-text">Agende sua Aula!</span>
+</a>
     <script src="assets/script.js"></script>
 </body>
 
