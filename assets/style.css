@@ -129,16 +129,17 @@
     }
 
     .texto-wrapper h1 {
-        font-size: 3.5rem; /* Título menor */
+        font-size: 3.9rem; /* Título menor */
     }
 
     .home-subtitulo {
         margin-left: auto;
         margin-right: auto;
+        font-size: 1.5rem;
     }
 
     .btn-home-premium {
-        width: 100%; /* Botão ocupa a largura toda */
+        width: 80%; /* Botão ocupa a largura toda */
         justify-content: center;
     }
 }
@@ -345,16 +346,16 @@
 }
 
 .mosaico-topo-fotos p {
-    color: var(--second-color);
+    color: var(--white-color);
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 10px;
+   
 }
 
 .mosaico-topo-fotos h2 {
-    color: var(--white-color);
-    font-size: 3rem;
+    color: var(--first-color);
+    font-size: 2rem;
     font-weight: 800;
 }
 
